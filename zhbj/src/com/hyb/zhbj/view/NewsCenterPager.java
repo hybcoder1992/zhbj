@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /** 
    *
@@ -44,12 +45,16 @@ public class NewsCenterPager extends BasePager {
 			@Override
 			public void onFailure(HttpException error, String msg) {
 				// TODO Auto-generated method stub
+				error.printStackTrace();
+				
 			}
 
 			@Override
 			public void onSuccess(ResponseInfo<String> responseInfo) {
 				// TODO Auto-generated method stub
-				Log.d("hyb", responseInfo.result);
+				Log.d("hyb", "获取数据成功");
+				//解析数据
+				
 			}
 		});
 	}
