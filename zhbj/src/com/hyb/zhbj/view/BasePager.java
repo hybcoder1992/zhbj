@@ -30,8 +30,7 @@ public class BasePager {
 	protected View initView()
 	{
 		View view=View.inflate(mActivity, R.layout.base_layout	, null);
-		//ib_menu = (ImageButton)view.findViewById(R.id.ib_menu);
-		//tv_title = (TextView)view.findViewById(R.id.tv_title);
+		
 		fl_content = (FrameLayout)view.findViewById(R.id.fl_content);
 		return view;
 	}

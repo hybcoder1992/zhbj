@@ -25,6 +25,12 @@ public class NoScrollViewPager extends ViewPager {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
+	public boolean onInterceptTouchEvent(MotionEvent arg0) {
+		
+		// TODO Auto-generated method stub
+		return false;//不拦截子控件的事件
+	}
+	@Override
 	public boolean onTouchEvent(MotionEvent arg0) {
 		
 		// TODO Auto-generated method stub

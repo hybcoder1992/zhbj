@@ -7,6 +7,7 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
@@ -16,10 +17,10 @@ public class MainActivity extends SlidingFragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main);//activity_main就只有一个帧布局,id为fl_main
 		
 		//设置slidemenu
-		setBehindContentView(R.layout.left_menu);
+		setBehindContentView(R.layout.left_menu);//left_menu也只有一个framelayout,id为fl_left_menu
 		SlidingMenu slidingMenu=getSlidingMenu();
 		//设置SlidingMenu 的手势模式  
         //TOUCHMODE_FULLSCREEN 全屏模式，在整个content页面中，滑动，可以打开SlidingMenu  
@@ -34,11 +35,22 @@ public class MainActivity extends SlidingFragmentActivity {
 	 * */
 	private void initFragment() 
 	{
-		
 		FragmentManager fm= getSupportFragmentManager();
 		FragmentTransaction ft=fm.beginTransaction();
 		ft.replace(R.id.fl_left_menu, new LeftMenuFragment(),LEFT_MENU_TAG);
 		ft.replace(R.id.fl_main, new ContentFragment(), CONTENT_MENU_TAG);
 		ft.commit();
+	}
+	//获取左侧侧边栏的fragment
+	public Fragment getLeftMenuFragment()
+	{
+		FragmentManager fm = getSupportFragmentManager();
+		return fm.findFragmentByTag(LEFT_MENU_TAG);
+	}
+	//获取contentfragment
+	public Fragment getContentFragment()
+	{
+		FragmentManager fm = getSupportFragmentManager();
+		return fm.findFragmentByTag(CONTENT_MENU_TAG);
 	}
 }

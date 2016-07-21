@@ -16,6 +16,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
@@ -48,13 +49,24 @@ public class ContentFragment extends BaseFragment {
 		ib_menu = (ImageButton)view.findViewById(R.id.ib_menu);
 		return view;
 	}
-
+	//initData这个方法在父类的onActivityCreated方法中调用,onActivityCreated在fragment所依附的activity的onCreate方法之后调用
 	@Override
 	public void initData() {
 		// TODO Auto-generated method stub
 		pagers=new ArrayList<BasePager>();
 		//设置顶部标题栏文字
 		tv_title.setText("首页");
+		//
+		ib_menu.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				MainActivity activity=(MainActivity)mActivity;
+				SlidingMenu slidingMenu=activity.getSlidingMenu();
+				if(!slidingMenu.isMenuShowing())
+					slidingMenu.showMenu();
+			}
+		});
 		//添加五个标签页
 		pagers.add(new HomePager(mActivity));
 		pagers.add(new NewsCenterPager(mActivity));
@@ -149,7 +161,11 @@ public class ContentFragment extends BaseFragment {
 			slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 		
 	}
-
+	//获取新闻中心的页面
+	public BasePager getNewsCenterPager()
+	{
+		return pagers.get(1);
+	}
 	class ContentAdapter extends PagerAdapter
 	{
 		@Override
@@ -167,7 +183,6 @@ public class ContentFragment extends BaseFragment {
 		public void destroyItem(ViewGroup container, int position, Object object) {
 			
 			// TODO Auto-generated method stub
-			
 			container.removeView((View)object);
 		}
 		@Override
