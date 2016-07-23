@@ -17,7 +17,11 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowNoTitle">true</item>
     </style>
-
+<!-- 
+<item name="android:drawablePadding">3dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+ -->
     <style name="RadioButtonBottomTab">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -25,11 +29,30 @@
         <item name="android:button">@null</item>
         <item name="android:textColor">@color/rb_bottom_tab_text</item>
         <item name="android:gravity">center</item>
-        <item name="android:drawablePadding">3dp</item>
-        <item name="android:padding">5dp</item>
+        
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:layout_marginBottom">0dp</item>
+        
+    </style>
+    
+    <style name="StyledIndicators" parent="AppTheme">
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+    </style>
+    
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:dividerPadding">8dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@color/selector_tabtext</item>
     </style>
     
     

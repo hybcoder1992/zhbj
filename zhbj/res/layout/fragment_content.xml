@@ -17,42 +17,42 @@
     <RadioGroup 
         android:id="@+id/rg_bottom_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="@drawable/bottom_tab_bg"
         android:orientation="horizontal"
-         android:gravity="center"
+        android:layout_gravity="bottom"
+         android:gravity="center_vertical"
         >
         <RadioButton 
             android:id="@+id/rb_home"
-            style="@style/RadioButtonBottomTab"
-            android:text="首页"
+            style="@style/RadioButtonBottomTab"           
             android:checked="true"           
-            android:drawableTop="@drawable/rb_home"            
+            android:drawableTop="@drawable/rb_home"   
+            android:text="首页"         
             />
         <RadioButton 
             android:id="@+id/rb_newscenter"
             style="@style/RadioButtonBottomTab"
-            android:text="新闻中心" 
-            android:drawableTop="@drawable/rb_newscenter"       
+            android:drawableTop="@drawable/rb_newscenter"  
+            android:text="新闻中心"      
             />
-        
         <RadioButton 
             android:id="@+id/rb_smart_service"
-            style="@style/RadioButtonBottomTab"
-            android:text="智慧服务" 
-            android:drawableTop="@drawable/rb_smart_service"          
+            style="@style/RadioButtonBottomTab"           
+            android:drawableTop="@drawable/rb_smart_service"     
+            android:text="智慧服务"      
             />
         <RadioButton 
             android:id="@+id/rb_govaffairs"
-           style="@style/RadioButtonBottomTab"
-            android:text="政务"
+           style="@style/RadioButtonBottomTab"           
             android:drawableTop="@drawable/rb_govaffairs"    
+            android:text="政务"
             />
         <RadioButton 
             android:id="@+id/rb_setting"
-            style="@style/RadioButtonBottomTab"
-            android:text="设置"
+            style="@style/RadioButtonBottomTab"            
             android:drawableTop="@drawable/rb_setting"
+            android:text="设置"
             />
     </RadioGroup>
     

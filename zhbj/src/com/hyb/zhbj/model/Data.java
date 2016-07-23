@@ -13,7 +13,7 @@ public class Data {
 	private String title;
 	private Integer type;
 	private String url;
-	private ArrayList<CategoryChildren> childrens;
+	private ArrayList<CategoryChildren> children;
 	public Data() {
 
 		// TODO Auto-generated constructor stub
@@ -42,11 +42,11 @@ public class Data {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public ArrayList<CategoryChildren> getChildrens() {
-		return childrens;
+	public ArrayList<CategoryChildren> getChildren() {
+		return children;
 	}
-	public void setChildrens(ArrayList<CategoryChildren> childrens) {
-		this.childrens = childrens;
+	public void setChildren(ArrayList<CategoryChildren> children) {
+		this.children = children;
 	}
 	
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.hyb.zhbj.view.TopNewsViewPager
+	        android:id="@+id/vp_top_news"
+	        android:layout_width="match_parent"
+	        android:layout_height="180dp"
+        
+        />
+        <RelativeLayout 
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#a000"
+            android:padding="10dp"
+            >
+            <TextView 
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                />
+            <!-- 
+            app:fillColor选中的颜色
+            app:strokeColor线框颜色
+             app1:radius="3dp"
+                app:fillColor="#f00"               
+                app:pageColor="#ccc"
+                app:strokeWidth="0dp"
+                
+             -->
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator_circle"
+                android:padding="10dp"             
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"               
+                />
+        </RelativeLayout>
+    </FrameLayout>

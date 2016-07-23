@@ -62,7 +62,7 @@ public class NewsCenterPager extends BasePager {
 		menuFragment.setMenuData(datas.getData());
 		//初始化4个菜单详情页
 		detailPagers=new ArrayList<BaseMenuDetailPager>();
-		detailPagers.add(new NewsMenuDetailPager(mActivity,datas.getData().get(0).getChildrens()));
+		detailPagers.add(new NewsMenuDetailPager(mActivity,datas.getData().get(0).getChildren()));
 		detailPagers.add(new TopicMenuDetailPager(mActivity));
 		detailPagers.add(new PhotoMenuDetailPager(mActivity));
 		detailPagers.add(new InteractMenuDeatilPager(mActivity));
