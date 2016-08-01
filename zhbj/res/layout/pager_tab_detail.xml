@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <ListView 
+    <com.hyb.zhbj.view.PullToRefreshListView 
         android:id="@+id/lv_top_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

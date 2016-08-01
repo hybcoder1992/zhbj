@@ -535,7 +535,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int xsearch_msg_pull_arrow_down=0x7f020043;
     }
     public static final class id {
-        public static final int action_settings=0x7f090029;
+        public static final int action_settings=0x7f09002b;
         public static final int bottom=0x7f090004;
         public static final int btn_start=0x7f09000b;
         public static final int fl_content=0x7f090010;
@@ -545,6 +545,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ib_menu=0x7f09001a;
         public static final int indicator=0x7f090024;
         public static final int indicator_circle=0x7f09001e;
+        public static final int iv_arrow=0x7f090028;
         public static final int iv_dot_red=0x7f09000d;
         public static final int iv_icon=0x7f090020;
         public static final int iv_next=0x7f090025;
@@ -555,6 +556,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int lv_top_news=0x7f090027;
         public static final int margin=0x7f090009;
         public static final int none=0x7f090001;
+        public static final int pb_refresh=0x7f090029;
         public static final int rb_govaffairs=0x7f090016;
         public static final int rb_home=0x7f090013;
         public static final int rb_newscenter=0x7f090014;
@@ -565,7 +567,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int rl_splash=0x7f09000f;
         public static final int rl_title_bar=0x7f090019;
         public static final int selected_view=0x7f090000;
-        public static final int slidingmenumain=0x7f090028;
+        public static final int slidingmenumain=0x7f09002a;
         public static final int top=0x7f090005;
         public static final int triangle=0x7f090002;
         public static final int tv_category_name=0x7f09001f;
@@ -599,7 +601,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int list_item_news=0x7f03000a;
         public static final int news_menu_detail=0x7f03000b;
         public static final int pager_tab_detail=0x7f03000c;
-        public static final int slidingmenumain=0x7f03000d;
+        public static final int pull_to_refresh=0x7f03000d;
+        public static final int slidingmenumain=0x7f03000e;
     }
     public static final class menu {
         public static final int splash=0x7f0b0000;

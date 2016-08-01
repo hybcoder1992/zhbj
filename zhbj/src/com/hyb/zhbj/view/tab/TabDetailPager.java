@@ -10,6 +10,7 @@ import com.hyb.zhbj.model.detail.DetailNews;
 import com.hyb.zhbj.model.detail.DetailTopNews;
 import com.hyb.zhbj.utils.CacheUtil;
 import com.hyb.zhbj.utils.GlobalConstants;
+import com.hyb.zhbj.view.PullToRefreshListView;
 import com.hyb.zhbj.view.menu.BaseMenuDetailPager;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
@@ -29,7 +30,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
-import android.widget.ListView;
 import android.widget.TextView;
 
 /** 
@@ -45,7 +45,7 @@ public class TabDetailPager extends BaseMenuDetailPager {
 	private ArrayList<DetailTopNews> topNews;
 	private TextView tv_title;
 	private CirclePageIndicator indicator_circle;
-	private ListView lvTopNews;
+	private PullToRefreshListView lvTopNews;
 	private ArrayList<DetailNews> detailNews;
 	private View headerView;
 	public TabDetailPager(Activity activity,CategoryChildren child) {
@@ -64,7 +64,7 @@ public class TabDetailPager extends BaseMenuDetailPager {
 		viewPager = (ViewPager)headerView.findViewById(R.id.vp_top_news);
 		tv_title = (TextView)headerView.findViewById(R.id.tv_title);
 		indicator_circle = (CirclePageIndicator)headerView.findViewById(R.id.indicator_circle);
-		lvTopNews = (ListView)view.findViewById(R.id.lv_top_news);
+		lvTopNews = (PullToRefreshListView)view.findViewById(R.id.lv_top_news);
 		//把上面的viewpager设置成listview的headview
 		lvTopNews.addHeaderView(headerView);
 		return view;
